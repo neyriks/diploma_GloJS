@@ -7,6 +7,7 @@ import callback from './modules/callback';
 import topMenu from './modules/topmenu';
 import openBurger from './modules/openBurger';
 import sliderMain from './modules/sliderMain';
+import arrow from './modules/arrow';
 
 dropMenu();
 togglePopUp();
@@ -15,3 +16,4 @@ callback();
 topMenu();
 openBurger();
 sliderMain();
+arrow();
