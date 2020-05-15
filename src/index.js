@@ -6,6 +6,7 @@ import gift from './modules/gift';
 import callback from './modules/callback';
 import topMenu from './modules/topmenu';
 import openBurger from './modules/openBurger';
+import sliderMain from './modules/sliderMain';
 
 dropMenu();
 togglePopUp();
@@ -13,3 +14,4 @@ gift();
 callback();
 topMenu();
 openBurger();
+sliderMain();
