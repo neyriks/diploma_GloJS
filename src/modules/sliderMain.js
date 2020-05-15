@@ -1,9 +1,7 @@
 'use strict';
 
 const sliderMain = () => {
-    const slider = document.querySelector('.main-slider'),
-    slides = document.querySelectorAll('.main-slider .slide');
-    console.log(slides);
+    const slides = document.querySelectorAll('.main-slider .slide');
     let currentSlide = 0;
     const autoPlaySlide = () => {
 
