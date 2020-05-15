@@ -7,7 +7,7 @@ const topMenu = () => {
         if(top > 400) {
             menu.style.position = 'fixed';
         } else {
-            menu.style.position = 'relative';
+            menu.style.position = '';
         }
         
     });
