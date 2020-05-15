@@ -4,7 +4,9 @@ const gift = () => {
         gift = document.querySelector('#gift'),
         closeGift = document.querySelector('#gift .close-form'),
         overlay = document.querySelector('#gift .overlay');
-    giftBtn.addEventListener('click', () => {
+    
+    if(giftBtn) {
+        giftBtn.addEventListener('click', () => {
         gift.style.display = 'block';
         gift.style.opacity = 0;
 
@@ -47,5 +49,7 @@ const gift = () => {
             gift.style.display = 'none';
         }
     });
-};
+} else {
+    console.log('No gift on this page');
+}};
 export default gift;

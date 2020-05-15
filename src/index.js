@@ -1,8 +1,13 @@
 'use strict';
 
 import dropMenu from './modules/dropMenu';
-dropMenu();
 import togglePopUp from './modules/togglePopUp';
-togglePopUp();
 import gift from './modules/gift';
+import callback from './modules/callback';
+import closeMenu from './modules/close';
+
+dropMenu();
+togglePopUp();
 gift();
+callback();
+closeMenu();

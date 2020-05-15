@@ -2,13 +2,13 @@
 
 const dropMenu = () => {
     let btnMenu = document.querySelector('.club-select'),
-    menu = document.querySelector('.club-select .clubs-list ul');
+        menu = document.querySelector('.clubs-list ul');
     btnMenu.addEventListener('click', () => {
-        let menuUl = document.querySelector('.club-select .clubs-list ul').style.display = 'none';
-        if(menuUl === 'none') {
-            menu.style.display = 'block';
-        } else {
+        let menuUl = document.querySelector('.clubs-list ul');
+        if(menuUl === 'block') {
             menu.style.display = 'none';
+        } else {
+            menu.style.display = 'block';
         }
     });
 };
