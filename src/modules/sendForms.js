@@ -2,11 +2,11 @@
 
 const sendForms = () => {
     const errorMsg = 'Что-то пошло не так',
-        successMsg = document.querySelector('#thanks'),
+        successMsg = 'Спасибо! Мы скоро с вами свяжемся!',
         loadingMsg = 'Загрузка...',
         forms = document.querySelectorAll('form'),
         statusMessage = document.createElement('div');
-        statusMessage.style.cssText = 'font-size: 2rem; color: #fff;';
+    statusMessage.style.cssText = 'font-size: 16px; color: #ffd11a; margin-top: 5px;';
     const postData = body => fetch('./server.php', {
         method: 'POST',
         headers: {
@@ -24,7 +24,7 @@ const sendForms = () => {
         }
     };
     const success = () => {
-        statusMessage.insertAdjacentHTML( `beforeend`, successMsg);
+        statusMessage.textContent = successMsg;
         removeStatusMessage();
     };
     const error = () => {
@@ -49,6 +49,7 @@ const sendForms = () => {
                 }
             }).catch(error);
             form.reset();
+
         });
         // Валидация формы.
         form.addEventListener('input', event => {
@@ -59,8 +60,10 @@ const sendForms = () => {
             if (target.name === 'name') {
                 target.value = target.value.replace(/[^а-я ]/gi, '');
             }
-        });
+        }); 
+        // проверка на чекбокс
+
     });
 };
- 
+
 export default sendForms;

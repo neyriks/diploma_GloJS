@@ -9,6 +9,7 @@ import openBurger from './modules/openBurger';
 import sliderMain from './modules/sliderMain';
 import arrow from './modules/arrow';
 import sendForms from './modules/sendForms';
+import services from './modules/services';
 
 clubMenu();
 togglePopUp();
@@ -19,3 +20,4 @@ openBurger();
 sliderMain();
 arrow();
 sendForms();
+services();
