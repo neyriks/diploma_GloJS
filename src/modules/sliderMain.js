@@ -16,7 +16,7 @@ const sliderMain = () => {
 
     };
     const startSlide = () => {
-        setInterval(autoPlaySlide, 3500);
+        setInterval(autoPlaySlide, 4000);
     };
     startSlide();
     

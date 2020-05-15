@@ -3,7 +3,8 @@ const gift = () => {
     const giftBtn = document.querySelector('.fixed-gift'),
         gift = document.querySelector('#gift'),
         closeGift = document.querySelector('#gift .close-form'),
-        overlay = document.querySelector('#gift .overlay');
+        overlay = document.querySelector('#gift .overlay'),
+        closeBtn = document.querySelector('#gift .close-btn');
     
     if(giftBtn) {
         giftBtn.addEventListener('click', () => {
@@ -48,6 +49,9 @@ const gift = () => {
         if(e.target === overlay) {
             gift.style.display = 'none';
         }
+    });
+    closeBtn.addEventListener('click', () => {
+        gift.style.display = 'none';
     });
 } else {
     console.log('No gift on this page');
