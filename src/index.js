@@ -22,5 +22,5 @@ openBurger();
 sliderMain();
 arrow();
 sendForms();
-const services = new SliderCarousel();
-services.init();
+const carousel = new SliderCarousel();
+carousel.init();

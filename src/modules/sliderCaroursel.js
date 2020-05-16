@@ -13,8 +13,8 @@ class SliderCarousel {
       if (!(main || wrap)) {
         console.warn(`slider-carousel: Необходимо 2 свойства, "main" и "wrap"`);
       }
-      this.main = document.querySelector('.services-slider');
-      this.wrap = document.querySelector('services-slider');
+      this.main = document.querySelector('#services .wrapper');
+      this.wrap = document.querySelector('.services-slider');
       this.slides = document.querySelector('.services-slider').children;
       this.next = document.querySelector(next);
       this.prev = document.querySelector(prev);
