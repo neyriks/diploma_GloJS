@@ -1,6 +1,6 @@
 'use strict';
 
-const togglePopUp = () => {
+const freeVisitForm = () => {
     const btnPopUp = document.querySelector('.open-popup'),
         popup = document.getElementById('free_visit_form'),
         closePopUp = document.querySelector('#free_visit_form .close-form'),
@@ -44,4 +44,4 @@ const togglePopUp = () => {
     });
 };
 
-export default togglePopUp;
+export default freeVisitForm;

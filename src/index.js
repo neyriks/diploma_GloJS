@@ -1,7 +1,7 @@
 'use strict';
 
 import clubMenu from './modules/clubMenu';
-import togglePopUp from './modules/togglePopUp';
+import freeVisitForm from './modules/freeVisitForm';
 import gift from './modules/gift';
 import callback from './modules/callback';
 import topMenu from './modules/topmenu';
@@ -9,12 +9,12 @@ import openBurger from './modules/openBurger';
 import sliderMain from './modules/sliderMain';
 import arrow from './modules/arrow';
 import sendForms from './modules/sendForms';
-import services from './modules/services';
+import SliderCarousel from './modules/sliderCaroursel';
 import smooth from './modules/smooth';
 
 smooth();
 clubMenu();
-togglePopUp();
+freeVisitForm();
 gift();
 callback();
 topMenu();
@@ -22,4 +22,5 @@ openBurger();
 sliderMain();
 arrow();
 sendForms();
-services();
+const services = new SliderCarousel();
+services.init();
