@@ -10,7 +10,9 @@ import sliderMain from './modules/sliderMain';
 import arrow from './modules/arrow';
 import sendForms from './modules/sendForms';
 import services from './modules/services';
+import smooth from './modules/smooth';
 
+smooth();
 clubMenu();
 togglePopUp();
 gift();

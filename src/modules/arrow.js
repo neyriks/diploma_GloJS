@@ -10,12 +10,12 @@ const arrow = () => {
             arrow.style.display = 'block';
         }
     });
-    arrow.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector('.header-main').scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      });
+    // arrow.addEventListener('click', function (e) {
+    //     e.preventDefault();
+    //     document.querySelector('.header-main').scrollIntoView({
+    //       behavior: 'smooth',
+    //       block: 'start'
+    //     });
+    //   });
 };
 export default arrow;
