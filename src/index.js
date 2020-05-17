@@ -11,6 +11,7 @@ import arrow from './modules/arrow';
 import sendForms from './modules/sendForms';
 import SliderCarousel from './modules/sliderCaroursel';
 import smooth from './modules/smooth';
+import galleryCarousel from './modules/gallerySlider';
 
 smooth();
 clubMenu();
@@ -22,11 +23,10 @@ openBurger();
 sliderMain();
 arrow();
 sendForms();
+galleryCarousel();
 
 const carousel = new SliderCarousel({
     main: '#services .wrapper',
     wrap: '.services-slider',
-    // prev: '#leftArrow',
-    // next: '#rightArrow'
 });
 carousel.init();
