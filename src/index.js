@@ -22,5 +22,11 @@ openBurger();
 sliderMain();
 arrow();
 sendForms();
-const carousel = new SliderCarousel();
+
+const carousel = new SliderCarousel({
+    main: '#services .wrapper',
+    wrap: '.services-slider',
+    // prev: '#leftArrow',
+    // next: '#rightArrow'
+});
 carousel.init();

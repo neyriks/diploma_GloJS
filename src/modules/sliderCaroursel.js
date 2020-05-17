@@ -7,15 +7,15 @@ class SliderCarousel {
       prev,
       infinity = false,
       position = 0,
-      slidesToShow = 5,
+      slidesToShow = 3,
       responsive = []
     }) {
       if (!(main || wrap)) {
         console.warn(`slider-carousel: Необходимо 2 свойства, "main" и "wrap"`);
       }
-      this.main = document.querySelector('#services .wrapper');
-      this.wrap = document.querySelector('.services-slider');
-      this.slides = document.querySelector('.services-slider').children;
+      this.main = document.querySelector(main);
+      this.wrap = document.querySelector(wrap);
+      this.slides = document.querySelector(wrap).children;
       this.next = document.querySelector(next);
       this.prev = document.querySelector(prev);
       this.slidesToShow = slidesToShow;
@@ -67,11 +67,8 @@ class SliderCarousel {
           will-change: transform !important;
         }
         .lex-slider__item {
-          display: flex;
-          align-items: center;
-          justify-content: center;
           flex: 0 0 ${this.options.slideWidth}% !important;
-          margin: auto 0 !important;
+          margin: 0 auto;
         }
         `;
       document.head.appendChild(style);
@@ -120,14 +117,19 @@ class SliderCarousel {
         .lex-slider__next {
           margin: 0 10px;
           border: 20px solid transparent;
-          background: transparent;
           cursor: pointer;
+          background: transparent;
         }
         .lex-slider__next {
-          border-left-color: #19b5fe;
+          position: absolute;
+          top: 144px;
+          right: -10px;
+          border-left-color: #181728;
         }
         .lex-slider__prev {
-          border-right-color: #19b5fe;
+          position: absolute;
+          top: 144px;
+          border-right-color: #181728;
         }
         .lex-slider__prev:hover,
         .lex-slider__next:hover,
