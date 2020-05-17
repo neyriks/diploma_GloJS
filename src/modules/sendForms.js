@@ -61,7 +61,6 @@ const sendForms = () => {
                 target.value = target.value.replace(/[^а-я ]/gi, '');
             }
         }); 
-        // проверка на чекбокс
 
     });
 };

@@ -12,6 +12,7 @@ import sendForms from './modules/sendForms';
 import SliderCarousel from './modules/sliderCaroursel';
 import smooth from './modules/smooth';
 import galleryCarousel from './modules/gallerySlider';
+import bannerForm from './modules/bannerForm';
 
 smooth();
 clubMenu();
@@ -24,6 +25,7 @@ sliderMain();
 arrow();
 sendForms();
 galleryCarousel();
+bannerForm();
 
 const carousel = new SliderCarousel({
     main: '#services .wrapper',
