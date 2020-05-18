@@ -1,6 +1,6 @@
 'use strict';
 const sendForm = () => {
-    const thanks = document.getElementById('thanks'),
+    const successMsg = document.getElementById('thanks'),
         loadMessage = 'Загрузка...',
         forms = document.querySelectorAll('form'),
         statusMessage = document.createElement('div');
@@ -9,7 +9,7 @@ const sendForm = () => {
     statusMessage.classList.add('toDel');
     statusMessage.style.cssText = `font-size: 16px; color: #ffd11a; margin-top: 5px;`;
 
-    //Подклюаем к каждой форме
+    //Подключаем к каждой форме
     forms.forEach(form => {
         form.addEventListener('submit', (event) => {
             event.preventDefault();
@@ -30,7 +30,7 @@ const sendForm = () => {
                     }
                 }
             }
-            //
+            
             target.appendChild(statusMessage);
             statusMessage.innerHTML = loadMessage;
 
@@ -71,11 +71,13 @@ const sendForm = () => {
                 .catch((error) => {
                     statusMessage.remove();
                     popupStatus();
-                    let fault = thanks.querySelector('.form-content');
+                    let fault = successMsg.querySelector('.form-content');
                     fault.innerHTML = `<p>Во время отправки формы возникала ошибка.</p>
                 <button class="btn close-btn">OK</button>`;
                 });
         });
+
+        // Валидация
         form.addEventListener('input', event => {
             const target = event.target;
             if (target.name === 'phone') {
@@ -89,17 +91,17 @@ const sendForm = () => {
 
 
     const popupStatus = () => {
-        thanks.style.display = 'block';
-        thanks.querySelector('.form-content').innerHTML = `<h4>Спасибо!</h4><p>Ваша заявка отправлена.<br>
+        successMsg.style.display = 'block';
+        successMsg.querySelector('.form-content').innerHTML = `<h4>Спасибо!</h4><p>Ваша заявка отправлена.<br>
         Мы свяжемся с вами в ближайшее время.</p><button class="btn close-btn">OK</button>`;
-        thanks.addEventListener('click', (e) => {
+        successMsg.addEventListener('click', (e) => {
             let target = e.target;
             if (!target.closest('.form-content') || target.classList.contains('close-btn')) {
-                thanks.style.display = 'none';
+                successMsg.style.display = 'none';
             }
         });
         setTimeout(() => {
-            thanks.style.display = 'none';
+            successMsg.style.display = 'none';
         }, 3000);
     };
 
