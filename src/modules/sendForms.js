@@ -76,7 +76,15 @@ const sendForm = () => {
                 <button class="btn close-btn">OK</button>`;
                 });
         });
-        
+        form.addEventListener('input', event => {
+            const target = event.target;
+            if (target.name === 'phone') {
+                target.value = target.value.replace(/[^\\+\d]/g, '');
+            }
+            if (target.name === 'name') {
+                target.value = target.value.replace(/[^а-я ]/gi, '');
+            }
+        }); 
     });
 
 
