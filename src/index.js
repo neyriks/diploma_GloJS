@@ -13,6 +13,7 @@ import SliderCarousel from './modules/sliderCaroursel';
 import smooth from './modules/smooth';
 import galleryCarousel from './modules/gallerySlider';
 import bannerForm from './modules/bannerForm';
+import calculator from './modules/calculator';
 
 smooth();
 clubMenu();
@@ -26,7 +27,7 @@ arrow();
 sendForms();
 galleryCarousel();
 bannerForm();
-
+calculator();
 const carousel = new SliderCarousel({
     main: '#services .wrapper',
     wrap: '.services-slider',
