@@ -14,12 +14,13 @@ const sendForm = () => {
         form.addEventListener('submit', (event) => {
             event.preventDefault();
             let target = event.target;
-
+            // Валидация на чекбокс
             let tChild = target.children;
             let persDat = target.querySelector('.personal-data');
             for (let i = 0; i < tChild.length; i++) {
                 if (persDat) {
                     let check = target.querySelector('.personal-data input');
+                    
                     if (check.checked === false) {
                         const errorDiv = document.createElement('div');
                         errorDiv.classList.add('validator-error');
@@ -30,7 +31,7 @@ const sendForm = () => {
                     }
                 }
             }
-            
+
             target.appendChild(statusMessage);
             statusMessage.innerHTML = loadMessage;
 
@@ -83,10 +84,14 @@ const sendForm = () => {
             if (target.name === 'phone') {
                 target.value = target.value.replace(/[^\\+\d]/g, '');
             }
-            if (target.name === 'name') {
+            if (target.name === 'name' && target.placeholder !== 'Промокод') {
                 target.value = target.value.replace(/[^а-я ]/gi, '');
             }
-        }); 
+            // Валидация на промокод
+            if (target.placeholder === 'Промокод') {
+                target.value = target.value.replace(/[^а-яА-ЯёЁ0-9]/);
+            }
+        });
     });
 
 
