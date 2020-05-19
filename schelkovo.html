@@ -9,6 +9,62 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.min.css">
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <style>
+        .slide_active {
+            display: inline-block !important;
+        }
+
+        #arrow_left {
+            position: absolute;
+            top: 180px;
+            left: 0;
+            background: #ffd11a;
+            border: none;
+            border-radius: 50%;
+            height: 40px;
+            width: 40px;
+        }
+
+        #arrow_right {
+            position: absolute;
+            top: 180px;
+            right: 0;
+            background: #ffd11a;
+            border: none;
+            border-radius: 50%;
+            height: 40px;
+            width: 40px;
+        }
+        .gallery-dots {
+            position: absolute;
+            bottom: 20px;
+            width: 85%;
+            margin: 20px auto 0;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            justify-content: center;
+            z-index: 5;
+        }
+        .dot {
+            cursor: pointer;
+            height: 5px;
+            width: 26px;
+            margin: -10px  10px 0 0;
+            display: inline-block;
+            -webkit-transition: background-color, -webkit-transform .4s;
+            transition: background-color, transform .4s, -webkit-transform .4s;
+            background-color: white;
+            border-radius: 10px;
+
+        }
+        .dot_active {
+            background-color: #ffd11a;
+        } 
+        .gallery-slider {
+            position: relative;
+        }
+    </style>
 </head>
 <body>
 <header class="header-main" id="header-header">
@@ -363,6 +419,16 @@
                 <div class="slide">
                     <img src="images/gallery/photo5.jpg" alt="">
                 </div>
+                <button class="slider-arrow" id="arrow_left" style="font-size: 20px;">
+                    <</button> <button class="slider-arrow" id="arrow_right" style="font-size: 20px;">>
+                </button>
+                <ul class="gallery-dots">
+                    <li class="dot dot_active"></li>
+                    <li class="dot"></li>
+                    <li class="dot"></li>
+                    <li class="dot"></li>
+                    <li class="dot"></li>
+                </ul>
             </div>
         </div>
     </div>

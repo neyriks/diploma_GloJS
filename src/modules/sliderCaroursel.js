@@ -60,6 +60,7 @@ class SliderCarousel {
       style.textContent = `
         .lex-slider {
           overflow: hidden !important;
+          position: relative;
         }
         .lex-slider__wrap {
           display: flex !important;

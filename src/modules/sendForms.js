@@ -84,13 +84,13 @@ const sendForm = () => {
             if (target.name === 'phone') {
                 target.value = target.value.replace(/[^\\+\d]/g, '');
             }
-            if (target.name === 'name' && target.placeholder !== 'Промокод') {
-                target.value = target.value.replace(/[^а-я ]/gi, '');
+            if(target.name === 'discount') {
+                target.value = target.value.replace(/[^а-я0-9]/i, '');
             }
-            // Валидация на промокод
-            if (target.placeholder === 'Промокод') {
-                target.value = target.value.replace(/[^а-яА-ЯёЁ0-9]/);
+            if (target.name === 'name') {
+                target.value = target.value.replace(/[^а-я]/i, '');
             }
+            
         });
     });
 

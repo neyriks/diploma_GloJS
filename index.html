@@ -62,6 +62,9 @@
         .dot_active {
             background-color: #ffd11a;
         } 
+        .gallery-slider {
+            position: relative;
+        }
     </style>
 </head>
 
@@ -276,7 +279,7 @@
         </div>
     </section>
     <section id="services">
-        <div class="wrapper" style="position: relative;">
+        <div class="wrapper">
             <h2>услуги наших клубов</h2>
             <div class="services-slider">
                 <div class="slide">
@@ -337,7 +340,7 @@
         <h2>Фотогалерея</h2>
         <div class="gallery-bg">
             <div class="wrapper">
-                <div class="gallery-slider"  style="position: relative;">
+                <div class="gallery-slider">
                     <div class="slide">
                         <img src="images/gallery/photo1.jpg" alt="">
                     </div>
@@ -403,7 +406,7 @@
                             </label>
                         </div>
                         <div class="price">
-                            <div class="price-message input-text"><input name="name" type="text"
+                            <div class="price-message input-text"><input name="discount" type="text"
                                     placeholder="Промокод"></div>
                             <div class="price-message">Цена:</div>
                             <div class="price-message" id="price-total">2999</div>
@@ -591,9 +594,9 @@
                 <button class="btn close-btn">OK</button>
             </div>
         </div>
-
     </div>
     <script src="./dist/main.js"></script>
+    
 </body>
 
 </html>

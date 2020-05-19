@@ -1,8 +1,11 @@
 'use strict';
-import closeMenu from './close';
 const freeVisitForm = () => {
     const btnPopUp = document.querySelector('.open-popup'),
-        freeVisitForm = document.getElementById('free_visit_form');
+        freeVisitForm = document.getElementById('free_visit_form'),
+        closeFreeV = document.querySelector('#free_visit_form .close_icon'),
+        closeFreeVOverlay = document.querySelector('#free_visit_form .overlay');
+
+
     btnPopUp.addEventListener('click', () => {
         freeVisitForm.style.display = 'block';
         freeVisitForm.style.opacity = 0;
@@ -30,7 +33,12 @@ const freeVisitForm = () => {
             },
         });
     });
-    closeMenu();
+    closeFreeV.addEventListener('click', () => {
+        freeVisitForm.style.display = 'none';
+    });
+    closeFreeVOverlay.addEventListener('click', () => {
+        freeVisitForm.style.display = 'none';
+    });
 };
 
 export default freeVisitForm;

@@ -4,7 +4,6 @@ const galleryCarousel = () => {
   slides = gallerySlider.querySelectorAll('.slide'),
   btn = document.querySelectorAll('#gallery button'),
   dots = document.querySelectorAll('.dot');
-
   
   slides.forEach( (slide, index) => {
       if (index === 0) {

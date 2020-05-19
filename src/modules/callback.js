@@ -1,8 +1,9 @@
 'use strict';
-import closeMenu from './close';
 const callback = () => {
     const callbackBtn = document.querySelector('.callback-btn'),
-        callBackForm = document.querySelector('#callback_form');
+        callBackForm = document.querySelector('#callback_form'),
+        callbackCloseBtn = document.querySelector('.close_icon'),
+        callBackOverlay = document.querySelector('.overlay');
 
     callbackBtn.addEventListener('click', () => {
         callBackForm.style.display = 'block';
@@ -36,7 +37,12 @@ const callback = () => {
             },
         });
     });
-    closeMenu();
+    callbackCloseBtn.addEventListener('click', () => {
+        callBackForm.style.display = 'none';
+    });
+    callBackOverlay.addEventListener('click', () => {
+        callBackForm.style.display = 'none';
+    });
 };
 
 export default callback;

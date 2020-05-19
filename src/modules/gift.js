@@ -1,9 +1,10 @@
 'use strict';
-import closeMenu from './close';
 const gift = () => {
     const giftBtn = document.querySelector('.fixed-gift'),
         gift = document.querySelector('#gift'),
-        closeGift = document.querySelector('#gift .close-form');
+        closeGift = document.querySelector('#gift .close_icon'),
+        btnSucces = document.querySelector('#gift button'),
+        gitftOverlay = document.querySelector('#gift .overlay');
     
     if(giftBtn) {
         giftBtn.addEventListener('click', () => {
@@ -39,12 +40,14 @@ const gift = () => {
         });
         giftBtn.style.display = 'none';
     });
-    // Закрываем Popup
     closeGift.addEventListener('click', () => {
         gift.style.display = 'none';
     });
-    closeMenu();
-} else {
-    console.log('No gift on this page');
+    btnSucces.addEventListener('click', () => {
+        gift.style.display = 'none';
+    });
+    gitftOverlay.addEventListener('click', () => {
+        gift.style.display = 'none';
+    });
 }};
 export default gift;
