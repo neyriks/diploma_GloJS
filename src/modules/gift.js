@@ -1,10 +1,9 @@
 'use strict';
+import closeMenu from './close';
 const gift = () => {
     const giftBtn = document.querySelector('.fixed-gift'),
         gift = document.querySelector('#gift'),
-        closeGift = document.querySelector('#gift .close-form'),
-        overlay = document.querySelector('#gift .overlay'),
-        closeBtn = document.querySelector('#gift .close-btn');
+        closeGift = document.querySelector('#gift .close-form');
     
     if(giftBtn) {
         giftBtn.addEventListener('click', () => {
@@ -44,15 +43,7 @@ const gift = () => {
     closeGift.addEventListener('click', () => {
         gift.style.display = 'none';
     });
-    // Закрываем через подложку.
-    overlay.addEventListener('click', (e) => {
-        if(e.target === overlay) {
-            gift.style.display = 'none';
-        }
-    });
-    closeBtn.addEventListener('click', () => {
-        gift.style.display = 'none';
-    });
+    closeMenu();
 } else {
     console.log('No gift on this page');
 }};

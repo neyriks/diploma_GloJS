@@ -1,13 +1,11 @@
 'use strict';
-
+import closeMenu from './close';
 const freeVisitForm = () => {
     const btnPopUp = document.querySelector('.open-popup'),
-        popup = document.getElementById('free_visit_form'),
-        closePopUp = document.querySelector('#free_visit_form .close-form'),
-        overlay = document.querySelector('#free_visit_form .overlay');
+        freeVisitForm = document.getElementById('free_visit_form');
     btnPopUp.addEventListener('click', () => {
-        popup.style.display = 'block';
-        popup.style.opacity = 0;
+        freeVisitForm.style.display = 'block';
+        freeVisitForm.style.opacity = 0;
         function animate({ duration, draw, timing }) {
             const start = performance.now();
             requestAnimationFrame(function animate(time) {
@@ -28,20 +26,11 @@ const freeVisitForm = () => {
                 return timeFraction;
             },
             draw(progress) {
-                popup.style.opacity = progress * 1;
+                freeVisitForm.style.opacity = progress * 1;
             },
         });
     });
-    // Закрываем Popup
-    closePopUp.addEventListener('click', () => {
-        popup.style.display = 'none';
-    });
-    // Закрываем через подложку.
-    overlay.addEventListener('click', (e) => {
-        if(e.target === overlay) {
-            popup.style.display = 'none';
-        }
-    });
+    closeMenu();
 };
 
 export default freeVisitForm;

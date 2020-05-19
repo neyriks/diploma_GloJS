@@ -1,17 +1,18 @@
 'use strict';
-
+import closeMenu from './close';
 const callback = () => {
     const callbackBtn = document.querySelector('.callback-btn'),
-    callBackForm = document.querySelector('#callback_form'),
-    closeBtn = document.querySelector('.close-form'),
-    overlay = document.querySelector('.overlay');
-    callbackBtn.addEventListener('click', () => {
-        callBackForm.style.display = 'block';
-    });
+        callBackForm = document.querySelector('#callback_form');
+
     callbackBtn.addEventListener('click', () => {
         callBackForm.style.display = 'block';
         callBackForm.style.opacity = 0;
-        function animate({ duration, draw, timing }) {
+
+        function animate({
+            duration,
+            draw,
+            timing
+        }) {
             const start = performance.now();
             requestAnimationFrame(function animate(time) {
                 let timeFraction = (time - start) / duration;
@@ -35,15 +36,7 @@ const callback = () => {
             },
         });
     });
-    closeBtn.addEventListener('click', () => {
-        callBackForm.style.display = 'none';
-    });
-    // Закрываем через подложку.
-    overlay.addEventListener('click', (e) => {
-        if(e.target === overlay) {
-            callBackForm.style.display = 'none';
-        }
-    });
+    closeMenu();
 };
 
 export default callback;
